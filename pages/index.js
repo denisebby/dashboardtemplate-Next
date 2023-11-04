@@ -32,7 +32,7 @@ const Home = (props) => {
           <div data-thq="thq-mobile-menu" className="home-mobile-menu">
             <div className="home-nav">
               <div className="home-top">
-                <h1 className="home-text1">Dashboard Template</h1>
+                <h1 className="home-text01">Dashboard Template</h1>
                 <div data-thq="thq-close-menu" className="home-close-menu">
                   <svg viewBox="0 0 1024 1024" className="home-icon02">
                     <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
@@ -57,7 +57,57 @@ const Home = (props) => {
             </div>
           </div>
         </header>
-        <div className="home-container1"></div>
+        <div className="home-container1">
+          <span className="home-text02">
+            <span className="home-text03">
+              This is a
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
+            </span>
+            <span className="home-text04">template dashboard web app</span>
+            <span className="home-text05">
+               made with Next JS. The plots are made with Plotly JS. I wanted to
+              find a way to make dashboards that had more flexibility beyond for
+              instance, Streamlit and Dash. The basic structure of the app is
+              made in TeleportHQ. Everything else and plotly plots are added
+              with code. The whole point is to maximize both the
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
+            </span>
+            <span className="home-text06">speed</span>
+            <span className="home-text07">
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
+            </span>
+            <span className="home-text08">
+              and
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: ' ',
+                }}
+              />
+            </span>
+            <span className="home-text09">flexibility</span>
+            <span className="home-text10">
+              {' '}
+              allowed in making dashboard apps. I am still experimenting with
+              this strategy. Check out the github repo for updates!
+            </span>
+            <br></br>
+            <br></br>
+            <span>    - Denis E.</span>
+            <br></br>
+          </span>
+        </div>
         <div className="home-container2">
           <div className="home-container3"></div>
           <div className="home-container4"></div>
@@ -138,7 +188,7 @@ const Home = (props) => {
             margin-bottom: var(--dl-space-space-threeunits);
             justify-content: space-between;
           }
-          .home-text1 {
+          .home-text01 {
             color: rgb(82, 185, 141);
           }
           .home-close-menu {
@@ -182,10 +232,41 @@ const Home = (props) => {
           .home-container1 {
             flex: 0 0 auto;
             width: 100%;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
-            height: var(--dl-size-size-xlarge);
+            height: auto;
             display: flex;
+            padding: var(--dl-space-space-oneandhalfunits);
             align-items: flex-start;
+            justify-content: flex-start;
+          }
+          .home-text02 {
+            font-weight: 300;
+          }
+          .home-text03 {
+            font-style: normal;
+          }
+          .home-text04 {
+            color: var(--dl-color-primary-greenish);
+            font-style: normal;
+          }
+          .home-text05 {
+            font-style: normal;
+          }
+          .home-text06 {
+            color: var(--dl-color-primary-greenish);
+            font-weight: 500;
+          }
+          .home-text07 {
+            font-weight: 500;
+          }
+          .home-text08 {
+            font-style: normal;
+          }
+          .home-text09 {
+            color: var(--dl-color-primary-greenish);
+            font-weight: 500;
+          }
+          .home-text10 {
+            font-style: normal;
           }
           .home-container2 {
             flex: 0 0 auto;
@@ -253,7 +334,7 @@ const Home = (props) => {
               align-items: center;
               justify-content: center;
             }
-            .home-text1 {
+            .home-text01 {
               font-size: 1.5em;
             }
             .home-register1 {
