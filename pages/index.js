@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
 
+import MultipleOptionsComponent from '../components/multiple_select'; 
+import NFLDropdownComponent from '../components/dropdown'; 
+
 const Home = (props) => {
+
+  const [metric, setMetric] = useState('');
+
+  const handleMetricChange = (selectedMetric) => {
+    setMetric(selectedMetric);
+  };
+
+
   return (
     <>
       <div className="home-container">
@@ -109,7 +120,13 @@ const Home = (props) => {
           </span>
         </div>
         <div className="home-container2">
-          <div className="home-container3"></div>
+          <div className="home-container3">
+            <NFLDropdownComponent onMetricChange={handleMetricChange} />
+            <MultipleOptionsComponent/>
+
+
+
+          </div>
           <div className="home-container4"></div>
         </div>
         <div className="home-container5">
