@@ -57,7 +57,7 @@ const Home = (props) => {
             </div>
           </div>
         </header>
-        <div className="home-container1">
+        <div className="home-container01">
           <span className="home-text02">
             <span className="home-text03">
               This is a
@@ -108,13 +108,20 @@ const Home = (props) => {
             <br></br>
           </span>
         </div>
-        <div className="home-container2">
-          <div className="home-container3"></div>
-          <div className="home-container4"></div>
+        <div className="home-container02">
+          <div className="home-container03">
+            <div className="home-container04"></div>
+            <div className="home-container05"></div>
+            <div className="home-container06"></div>
+          </div>
+          <div className="home-container07"></div>
         </div>
-        <div className="home-container5">
-          <div className="home-container6"></div>
-          <div className="home-container7"></div>
+        <div className="home-container08">
+          <div className="home-container09">
+            <div className="home-container10"></div>
+            <div className="home-container11"></div>
+          </div>
+          <div className="home-container12"></div>
         </div>
       </div>
       <style jsx>
@@ -229,7 +236,7 @@ const Home = (props) => {
             width: var(--dl-size-size-xsmall);
             height: var(--dl-size-size-xsmall);
           }
-          .home-container1 {
+          .home-container01 {
             flex: 0 0 auto;
             width: 100%;
             height: auto;
@@ -268,23 +275,47 @@ const Home = (props) => {
           .home-text10 {
             font-style: normal;
           }
-          .home-container2 {
+          .home-container02 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .home-container3 {
+          .home-container03 {
             flex: 0 0 auto;
             width: 25%;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
             height: var(--dl-size-size-xxlarge);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
+            justify-content: flex-start;
           }
-          .home-container4 {
+          .home-container04 {
+            flex: 0 0 auto;
+            width: 100%;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            height: 33.33%;
+            display: flex;
+            align-items: flex-start;
+          }
+          .home-container05 {
+            flex: 0 0 auto;
+            width: 100%;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            height: 33.33%;
+            display: flex;
+            align-items: flex-start;
+          }
+          .home-container06 {
+            flex: 0 0 auto;
+            width: 100%;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            height: 33.33%;
+            display: flex;
+            align-items: flex-start;
+          }
+          .home-container07 {
             flex: 0 0 auto;
             width: 75%;
             border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -293,23 +324,39 @@ const Home = (props) => {
             align-items: flex-start;
             flex-direction: column;
           }
-          .home-container5 {
+          .home-container08 {
             flex: 0 0 auto;
             width: 100%;
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
           }
-          .home-container6 {
+          .home-container09 {
             flex: 0 0 auto;
             width: 50%;
-            border: 2px dashed rgba(120, 120, 120, 0.4);
             height: var(--dl-size-size-xlarge);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
+            justify-content: flex-start;
           }
-          .home-container7 {
+          .home-container10 {
+            flex: 0 0 auto;
+            width: 100%;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            height: 20%;
+            display: flex;
+            align-items: flex-start;
+          }
+          .home-container11 {
+            flex: 0 0 auto;
+            width: 100%;
+            border: 2px dashed rgba(120, 120, 120, 0.4);
+            height: 80%;
+            display: flex;
+            align-items: flex-start;
+          }
+          .home-container12 {
             flex: 0 0 auto;
             width: 50%;
             border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -341,24 +388,24 @@ const Home = (props) => {
               color: #ffffff;
               background-color: var(--dl-color-primary-greenish);
             }
-            .home-container2 {
+            .home-container02 {
               flex-direction: column;
             }
-            .home-container3 {
+            .home-container03 {
               width: 100%;
               height: var(--dl-size-size-xlarge);
             }
-            .home-container4 {
+            .home-container07 {
               width: 100%;
               height: var(--dl-size-size-xlarge);
             }
-            .home-container5 {
+            .home-container08 {
               flex-direction: column;
             }
-            .home-container6 {
+            .home-container09 {
               width: 100%;
             }
-            .home-container7 {
+            .home-container12 {
               width: 100%;
             }
           }
