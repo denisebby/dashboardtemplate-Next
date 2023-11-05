@@ -6,7 +6,7 @@ import NFLDropdownComponent from '../components/dropdown';
 
 const Home = (props) => {
 
-  const [metric, setMetric] = useState('');
+  const [metric, setMetric] = useState('points_scored');
 
   const handleMetricChange = (selectedMetric) => {
     setMetric(selectedMetric);
@@ -121,8 +121,12 @@ const Home = (props) => {
         </div>
         <div className="home-container02">
           <div className="home-container03">
-            <div className="home-container04"></div>
-            <div className="home-container05"></div>
+            <div className="home-container04">
+              <NFLDropdownComponent onMetricChange={handleMetricChange}/>
+            </div>
+            <div className="home-container05">
+              <MultipleOptionsComponent/>
+            </div>
             <div className="home-container06"></div>
           </div>
           <div className="home-container07"></div>
@@ -288,6 +292,8 @@ const Home = (props) => {
           }
           .home-container02 {
             flex: 0 0 auto;
+            min-height: var(--dl-size-size-xxlarge);
+            height: auto;
             width: 100%;
             display: flex;
             align-items: flex-start;
@@ -296,9 +302,7 @@ const Home = (props) => {
           .home-container03 {
             flex: 0 0 auto;
             width: 25%;
-            height: var(--dl-size-size-xxlarge);
             display: flex;
-            align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
           }
@@ -306,7 +310,8 @@ const Home = (props) => {
             flex: 0 0 auto;
             width: 100%;
             border: 2px dashed rgba(120, 120, 120, 0.4);
-            height: 33.33%;
+            // height: 33.33%;
+            min-height: var(--dl-size-size-xxlarge-thirds);
             display: flex;
             align-items: flex-start;
           }
@@ -314,7 +319,9 @@ const Home = (props) => {
             flex: 0 0 auto;
             width: 100%;
             border: 2px dashed rgba(120, 120, 120, 0.4);
-            height: 33.33%;
+            // height: 33.33%;
+            min-height: var(--dl-size-size-xxlarge-thirds);
+
             display: flex;
             align-items: flex-start;
           }
@@ -323,6 +330,8 @@ const Home = (props) => {
             width: 100%;
             border: 2px dashed rgba(120, 120, 120, 0.4);
             height: 33.33%;
+            min-height: var(--dl-size-size-xxlarge-thirds);
+
             display: flex;
             align-items: flex-start;
           }
@@ -330,7 +339,7 @@ const Home = (props) => {
             flex: 0 0 auto;
             width: 75%;
             border: 2px dashed rgba(120, 120, 120, 0.4);
-            height: var(--dl-size-size-xxlarge);
+            // height: var(--dl-size-size-xxlarge);
             display: flex;
             align-items: flex-start;
             flex-direction: column;
@@ -401,14 +410,18 @@ const Home = (props) => {
             }
             .home-container02 {
               flex-direction: column;
+              min-height: var(--dl-size-size-xxlarge);
+
+              height: auto;
             }
             .home-container03 {
               width: 100%;
-              height: var(--dl-size-size-xlarge);
+              min-height: var(--dl-size-size-xlarge);
             }
             .home-container07 {
               width: 100%;
-              height: var(--dl-size-size-xlarge);
+              min-height: var(--dl-size-size-xxlarge);
+              height: auto;
             }
             .home-container08 {
               flex-direction: column;
