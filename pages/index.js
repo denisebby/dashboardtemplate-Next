@@ -3,6 +3,8 @@ import Head from 'next/head'
 
 import MultipleOptionsComponent from '../components/multiple_select'; 
 import NFLDropdownComponent from '../components/dropdown'; 
+import Slider from '../components/slider'; // Adjust the path as necessary
+
 
 const Home = (props) => {
 
@@ -10,6 +12,12 @@ const Home = (props) => {
 
   const handleMetricChange = (selectedMetric) => {
     setMetric(selectedMetric);
+  };
+
+  const [sliderValue, setSliderValue] = useState(30);
+
+  const handleSliderChange = (event) => {
+    setSliderValue(event.target.value);
   };
 
 
@@ -32,7 +40,10 @@ const Home = (props) => {
           <h1 className="home-text">Dashboard Template</h1>
           <div data-thq="thq-navbar-nav" className="home-desktop-menu">
             <div className="home-buttons">
-              <button className="home-register button">Github</button>
+              <button className="home-register button">
+              <a href="https://github.com/denisebby/dashboardtemplate-Next/tree/main_dev" target="_blank" class="my-button-class">Github</a>
+
+              </button>
             </div>
           </div>
           <div data-thq="thq-burger-menu" className="home-burger-menu">
@@ -127,7 +138,21 @@ const Home = (props) => {
             <div className="home-container05">
               <MultipleOptionsComponent/>
             </div>
-            <div className="home-container06"></div>
+            <div className="home-container06">
+            {/* <div class="slider-container">
+              <input type="range" min="0" max="60" value="30" class="slider" id="myRange"></input>
+            </div> */}
+
+              <div>
+                    <Slider
+                      min="0"
+                      max="60"
+                      value={sliderValue}
+                      onSliderChange={handleSliderChange}
+                    />
+                    
+              </div>
+            </div>
           </div>
           <div className="home-container07"></div>
         </div>
@@ -177,7 +202,19 @@ const Home = (props) => {
             color: var(--dl-color-gray-white);
             border-radius: var(--dl-radius-radius-radius8);
             background-color: var(--dl-color-primary-greenish);
+            border: none;
           }
+
+          .home-register:hover {
+            background-color: black; /* Sets the background color on hover */
+            color: var(--dl-color-gray-white); /* Sets the text color on hover */
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+
           .home-burger-menu {
             display: none;
           }
@@ -236,6 +273,7 @@ const Home = (props) => {
             align-items: center;
             flex-direction: row;
             justify-content: space-between;
+
           }
           .home-icon04 {
             width: var(--dl-size-size-xsmall);
@@ -298,6 +336,7 @@ const Home = (props) => {
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
+          
           }
           .home-container03 {
             flex: 0 0 auto;
@@ -305,7 +344,9 @@ const Home = (props) => {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+        
           }
+          // dropdown
           .home-container04 {
             flex: 0 0 auto;
             width: 100%;
@@ -313,8 +354,12 @@ const Home = (props) => {
             // height: 33.33%;
             min-height: var(--dl-size-size-xxlarge-thirds);
             display: flex;
-            align-items: flex-start;
+            // align-items: flex-start;
+
+            align-items: center; /* Centers children vertically */
+            justify-content: center;
           }
+          // multiple select
           .home-container05 {
             flex: 0 0 auto;
             width: 100%;
@@ -323,17 +368,29 @@ const Home = (props) => {
             min-height: var(--dl-size-size-xxlarge-thirds);
 
             display: flex;
-            align-items: flex-start;
+            // align-items: flex-start;
+
+            align-items: center; /* Centers children vertically */
+            justify-content: center;
           }
+          // slider
           .home-container06 {
-            flex: 0 0 auto;
             width: 100%;
             border: 2px dashed rgba(120, 120, 120, 0.4);
-            height: 33.33%;
             min-height: var(--dl-size-size-xxlarge-thirds);
-
-            display: flex;
-            align-items: flex-start;
+            text-align: center;
+            position: relative;
+            // height: 33.33%;
+            // flex: 0 0 auto;
+            // margin: 0 auto;
+            // padding: 5% 5% 5% 5%;
+            // display: block;
+            // align-items: flex-start;
+            // padding: 5%;
+            // margin-left: auto;
+            // margin-right: auto;
+            // align-items: center; /* Centers children vertically */
+            // justify-content: center;
           }
           .home-container07 {
             flex: 0 0 auto;
@@ -341,8 +398,11 @@ const Home = (props) => {
             border: 2px dashed rgba(120, 120, 120, 0.4);
             // height: var(--dl-size-size-xxlarge);
             display: flex;
-            align-items: flex-start;
+            // align-items: flex-start;
             flex-direction: column;
+
+            align-items: center; /* Centers children vertically */
+            justify-content: center;
           }
           .home-container08 {
             flex: 0 0 auto;
@@ -406,8 +466,21 @@ const Home = (props) => {
             }
             .home-register1 {
               color: #ffffff;
+              border-radius: var(--dl-radius-radius-radius8);
               background-color: var(--dl-color-primary-greenish);
+              border: none;
             }
+
+            .home-register1:hover {
+              background-color: black; /* Sets the background color on hover */
+              color: var(--dl-color-gray-white); /* Sets the text color on hover */
+              -webkit-transform: scale(1.1);
+              -moz-transform: scale(1.1);
+              -ms-transform: scale(1.1);
+              -o-transform: scale(1.1);
+              transform: scale(1.1);
+            }
+
             .home-container02 {
               flex-direction: column;
               min-height: var(--dl-size-size-xxlarge);
@@ -416,7 +489,7 @@ const Home = (props) => {
             }
             .home-container03 {
               width: 100%;
-              min-height: var(--dl-size-size-xlarge);
+              min-height: var(--dl-size-size-xxlarge);
             }
             .home-container07 {
               width: 100%;
@@ -444,6 +517,17 @@ const Home = (props) => {
               color: #ffffff;
               border-radius: var(--dl-radius-radius-radius8);
               background-color: var(--dl-color-primary-greenish);
+              border: none;
+            }
+
+            .home-register1:hover {
+              background-color: black; /* Sets the background color on hover */
+              color: var(--dl-color-gray-white); /* Sets the text color on hover */
+              -webkit-transform: scale(1.1);
+              -moz-transform: scale(1.1);
+              -ms-transform: scale(1.1);
+              -o-transform: scale(1.1);
+              transform: scale(1.1);
             }
           }
         `}

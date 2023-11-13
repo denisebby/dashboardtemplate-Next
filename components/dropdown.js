@@ -34,7 +34,7 @@ const NFLDropdownComponent = ( { onMetricChange } ) => {
   };
 
   return (
-    <select onChange={handleMetricChange}>
+    <select onChange={handleMetricChange} style={{"width": "50%"}}>
       {metrics.map((metric, index) => (
         <option key={index} value={metric}>
           {metric}
